@@ -1,97 +1,84 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>🐧 Penguin Animation</title>
-<style>
-  body {
-    margin:0;
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:linear-gradient(#c9e9ff,#faffff);
-    overflow:hidden;
-  }
+<!-- save as penguin.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="140" viewBox="0 0 320 140" role="img" aria-label="Animated penguin">
+  <style>
+    /* เดินไป-กลับ */
+    .penguin {
+      transform-origin: 50% 50%;
+      animation: walk 3s ease-in-out infinite;
+      will-change: transform;
+    }
+    @keyframes walk {
+      0%   { transform: translateX(0) scaleX(1); }
+      50%  { transform: translateX(70px) scaleX(-1); } /* กลับหัวเมื่อเดินกลับ */
+      100% { transform: translateX(0) scaleX(1); }
+    }
 
-  .penguin {
-    position:relative;
-    width:100px;
-    height:120px;
-    animation:waddle 4s ease-in-out infinite;
-  }
+    /* ปีกกระพือ */
+    .wing {
+      transform-origin: 50% 50%;
+      animation: flap 0.6s ease-in-out infinite;
+    }
+    @keyframes flap {
+      0%   { transform: rotate(0deg); }
+      50%  { transform: rotate(-18deg); }
+      100% { transform: rotate(0deg); }
+    }
 
-  /* ตัวเพนกวิน */
-  .penguin .body {
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:#0b1b2b;
-    border-radius:50% 50% 40% 40%;
-  }
+    /* ตาเด้งนิดหน่อย */
+    .eye {
+      animation: blink 4s steps(1) infinite;
+    }
+    @keyframes blink {
+      0%, 96% { transform: scaleY(1); }
+      97%, 100% { transform: scaleY(0.05); }
+    }
+  </style>
 
-  /* ท้อง */
-  .penguin .belly {
-    position:absolute;
-    left:18px;
-    top:20px;
-    width:64px;
-    height:80px;
-    background:#fff;
-    border-radius:50%;
-  }
+  <!-- background (ใส/โปร่งถ้าต้องการ) -->
+  <rect width="100%" height="100%" fill="transparent"/>
 
-  /* ตา */
-  .penguin .eye {
-    position:absolute;
-    width:10px;
-    height:10px;
-    background:#000;
-    border-radius:50%;
-    top:25px;
-    animation:blink 4s infinite;
-  }
-  .penguin .eye.left { left:25px; }
-  .penguin .eye.right { right:25px; }
+  <!-- ตัวเพนกวินเป็นกลุ่มเดียวที่เคลื่อน -->
+  <g class="penguin" transform="translate(40,10)">
+    <!-- ขา -->
+    <g transform="translate(120,90)">
+      <ellipse cx="-20" cy="12" rx="10" ry="6" fill="#ff9f3b"/>
+      <ellipse cx="20" cy="12" rx="10" ry="6" fill="#ff9f3b"/>
+    </g>
 
-  /* ปาก */
-  .penguin .beak {
-    position:absolute;
-    width:20px;
-    height:10px;
-    background:#ffb347;
-    border-radius:0 0 10px 10px;
-    top:42px;
-    left:40px;
-  }
+    <!-- ลำตัว -->
+    <g>
+      <ellipse cx="110" cy="70" rx="58" ry="68" fill="#0f1724"/> <!-- ตัวดำ -->
+      <ellipse cx="110" cy="78" rx="36" ry="50" fill="#fff"/> <!-- ท้องขาว -->
+    </g>
 
-  /* ปีก */
-  .penguin .wing {
-    position:absolute;
-    width:24px;
-    height:50px;
-    background:#071521;
-    border-radius:50%;
-    top:40px;
-    animation:flap 3s ease-in-out infinite;
-  }
-  .penguin .wing.left { left:-12px; transform-origin:100% 0%; }
-  .penguin .wing.right { right:-12px; transform-origin:0% 0%; }
+    <!-- ปีกซ้าย -->
+    <g class="wing" transform="translate(60,70) rotate(6)">
+      <path d="M0 0 C -26 8, -36 36, -6 44 C 8 48, 18 38, 6 10 Z" fill="#0f1724"/>
+    </g>
 
-  /* เท้า */
-  .penguin .foot {
-    position:absolute;
-    width:28px;
-    height:12px;
-    background:#ffb347;
-    bottom:0;
-    border-radius:50% 50% 0 0;
-  }
-  .penguin .foot.left { left:20px; }
-  .penguin .foot.right { right:20px; }
+    <!-- ปีกขวา -->
+    <g class="wing" transform="translate(180,70) rotate(-6)">
+      <path d="M0 0 C 26 8, 36 36, 6 44 C -8 48, -18 38, -6 10 Z" fill="#0f1724"/>
+    </g>
 
-  /* Animation เคลื่อนไหว */
-  @keyframes flap {
-    0%,100% { transform:rotate(0deg
+    <!-- หัว -->
+    <g transform="translate(110,20)">
+      <circle cx="0" cy="0" r="26" fill="#0f1724"/>
+      <ellipse cx="0" cy="6" rx="18" ry="22" fill="#fff"/> <!-- หน้า -->
+      <!-- ตา -->
+      <g transform="translate(-6,-2)">
+        <ellipse class="eye" cx="0" cy="0" rx="4.6" ry="5.6" fill="#0f1724"/>
+      </g>
+      <g transform="translate(8,-2)">
+        <ellipse class="eye" cx="0" cy="0" rx="4.6" ry="5.6" fill="#0f1724"/>
+      </g>
 
+      <!-- จมูก/ปาก -->
+      <path d="M-6 8 L0 14 L6 8 L0 10 Z" fill="#ff9f3b"/>
+    </g>
+
+    <!-- ลายอกเล็กๆ -->
+    <path d="M90 45 C 85 62, 95 86, 110 95 C 125 86, 135 62, 130 45 Z" fill="#fff" opacity="0.25"/>
+
+  </g>
+</svg>
