@@ -1,84 +1,96 @@
-<!-- save as penguin.svg -->
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="140" viewBox="0 0 320 140" role="img" aria-label="Animated penguin">
+<img src="https://raw.githubusercontent.com/USERNAME/REPO/main/penguin.svg" width="320"/>
+<!-- Animated Penguin for GitHub README -->
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" role="img" aria-label="Animated Penguin">
   <style>
-    /* เดินไป-กลับ */
-    .penguin {
-      transform-origin: 50% 50%;
-      animation: walk 3s ease-in-out infinite;
-      will-change: transform;
+    /* พื้นหลังหิมะ */
+    .snow {
+      fill: #e8f6ff;
     }
-    @keyframes walk {
+    .snowflake {
+      animation: fall 5s linear infinite;
+      opacity: 0.8;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-10px); opacity: 0.8; }
+      100% { transform: translateY(180px); opacity: 0.2; }
+    }
+
+    /* การเคลื่อนไหวเพนกวิน */
+    .penguin {
+      animation: waddle 3.2s ease-in-out infinite;
+      transform-origin: 50% 50%;
+    }
+    @keyframes waddle {
       0%   { transform: translateX(0) scaleX(1); }
-      50%  { transform: translateX(70px) scaleX(-1); } /* กลับหัวเมื่อเดินกลับ */
+      50%  { transform: translateX(90px) scaleX(-1); }
       100% { transform: translateX(0) scaleX(1); }
     }
 
     /* ปีกกระพือ */
     .wing {
+      animation: flap 0.7s ease-in-out infinite;
       transform-origin: 50% 50%;
-      animation: flap 0.6s ease-in-out infinite;
     }
     @keyframes flap {
-      0%   { transform: rotate(0deg); }
-      50%  { transform: rotate(-18deg); }
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(-15deg); }
       100% { transform: rotate(0deg); }
     }
 
-    /* ตาเด้งนิดหน่อย */
+    /* กะพริบตา */
     .eye {
       animation: blink 4s steps(1) infinite;
     }
     @keyframes blink {
-      0%, 96% { transform: scaleY(1); }
-      97%, 100% { transform: scaleY(0.05); }
+      0%, 95% { transform: scaleY(1); }
+      96%, 100% { transform: scaleY(0.1); }
     }
   </style>
 
-  <!-- background (ใส/โปร่งถ้าต้องการ) -->
-  <rect width="100%" height="100%" fill="transparent"/>
+  <!-- ท้องฟ้า -->
+  <rect width="100%" height="100%" class="snow"/>
 
-  <!-- ตัวเพนกวินเป็นกลุ่มเดียวที่เคลื่อน -->
-  <g class="penguin" transform="translate(40,10)">
+  <!-- หิมะตก -->
+  <circle class="snowflake" cx="30" cy="10" r="2" fill="white" style="animation-delay:0s"/>
+  <circle class="snowflake" cx="100" cy="0" r="1.5" fill="white" style="animation-delay:1s"/>
+  <circle class="snowflake" cx="160" cy="5" r="2.2" fill="white" style="animation-delay:2s"/>
+  <circle class="snowflake" cx="230" cy="10" r="1.8" fill="white" style="animation-delay:1.5s"/>
+  <circle class="snowflake" cx="280" cy="3" r="2" fill="white" style="animation-delay:2.8s"/>
+
+  <!-- พื้นหิมะ -->
+  <ellipse cx="160" cy="160" rx="160" ry="25" fill="#d3f0ff"/>
+
+  <!-- ตัวเพนกวิน -->
+  <g class="penguin" transform="translate(60,30)">
     <!-- ขา -->
-    <g transform="translate(120,90)">
-      <ellipse cx="-20" cy="12" rx="10" ry="6" fill="#ff9f3b"/>
-      <ellipse cx="20" cy="12" rx="10" ry="6" fill="#ff9f3b"/>
+    <g transform="translate(110,100)">
+      <ellipse cx="-14" cy="8" rx="8" ry="4" fill="#ffad33"/>
+      <ellipse cx="14" cy="8" rx="8" ry="4" fill="#ffad33"/>
     </g>
 
     <!-- ลำตัว -->
-    <g>
-      <ellipse cx="110" cy="70" rx="58" ry="68" fill="#0f1724"/> <!-- ตัวดำ -->
-      <ellipse cx="110" cy="78" rx="36" ry="50" fill="#fff"/> <!-- ท้องขาว -->
-    </g>
+    <ellipse cx="110" cy="70" rx="50" ry="65" fill="#111"/>
+    <ellipse cx="110" cy="78" rx="34" ry="48" fill="#fff"/>
 
-    <!-- ปีกซ้าย -->
-    <g class="wing" transform="translate(60,70) rotate(6)">
-      <path d="M0 0 C -26 8, -36 36, -6 44 C 8 48, 18 38, 6 10 Z" fill="#0f1724"/>
+    <!-- ปีก -->
+    <g class="wing" transform="translate(60,70)">
+      <path d="M0 0 C -25 8, -30 35, -5 40 C 5 42, 10 36, 6 10 Z" fill="#111"/>
     </g>
-
-    <!-- ปีกขวา -->
-    <g class="wing" transform="translate(180,70) rotate(-6)">
-      <path d="M0 0 C 26 8, 36 36, 6 44 C -8 48, -18 38, -6 10 Z" fill="#0f1724"/>
+    <g class="wing" transform="translate(160,70)">
+      <path d="M0 0 C 25 8, 30 35, 5 40 C -5 42, -10 36, -6 10 Z" fill="#111"/>
     </g>
 
     <!-- หัว -->
-    <g transform="translate(110,20)">
-      <circle cx="0" cy="0" r="26" fill="#0f1724"/>
-      <ellipse cx="0" cy="6" rx="18" ry="22" fill="#fff"/> <!-- หน้า -->
-      <!-- ตา -->
+    <g transform="translate(110,25)">
+      <circle cx="0" cy="0" r="24" fill="#111"/>
+      <ellipse cx="0" cy="6" rx="16" ry="20" fill="#fff"/>
       <g transform="translate(-6,-2)">
-        <ellipse class="eye" cx="0" cy="0" rx="4.6" ry="5.6" fill="#0f1724"/>
+        <ellipse class="eye" cx="0" cy="0" rx="3.5" ry="4.5" fill="#111"/>
       </g>
-      <g transform="translate(8,-2)">
-        <ellipse class="eye" cx="0" cy="0" rx="4.6" ry="5.6" fill="#0f1724"/>
+      <g transform="translate(6,-2)">
+        <ellipse class="eye" cx="0" cy="0" rx="3.5" ry="4.5" fill="#111"/>
       </g>
-
-      <!-- จมูก/ปาก -->
-      <path d="M-6 8 L0 14 L6 8 L0 10 Z" fill="#ff9f3b"/>
+      <path d="M-5 6 L0 12 L5 6 L0 8 Z" fill="#ffad33"/>
     </g>
-
-    <!-- ลายอกเล็กๆ -->
-    <path d="M90 45 C 85 62, 95 86, 110 95 C 125 86, 135 62, 130 45 Z" fill="#fff" opacity="0.25"/>
-
   </g>
 </svg>
