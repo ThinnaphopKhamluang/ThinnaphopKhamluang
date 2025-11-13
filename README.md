@@ -1,96 +1,42 @@
-<img src="https://raw.githubusercontent.com/USERNAME/REPO/main/penguin.svg" width="320"/>
-<!-- Animated Penguin for GitHub README -->
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" role="img" aria-label="Animated Penguin">
-  <style>
-    /* พื้นหลังหิมะ */
-    .snow {
-      fill: #e8f6ff;
-    }
-    .snowflake {
-      animation: fall 5s linear infinite;
-      opacity: 0.8;
-    }
-    @keyframes fall {
-      0% { transform: translateY(-10px); opacity: 0.8; }
-      100% { transform: translateY(180px); opacity: 0.2; }
-    }
-
-    /* การเคลื่อนไหวเพนกวิน */
-    .penguin {
-      animation: waddle 3.2s ease-in-out infinite;
-      transform-origin: 50% 50%;
-    }
-    @keyframes waddle {
-      0%   { transform: translateX(0) scaleX(1); }
-      50%  { transform: translateX(90px) scaleX(-1); }
-      100% { transform: translateX(0) scaleX(1); }
-    }
-
-    /* ปีกกระพือ */
-    .wing {
-      animation: flap 0.7s ease-in-out infinite;
-      transform-origin: 50% 50%;
-    }
-    @keyframes flap {
-      0% { transform: rotate(0deg); }
-      50% { transform: rotate(-15deg); }
-      100% { transform: rotate(0deg); }
-    }
-
-    /* กะพริบตา */
-    .eye {
-      animation: blink 4s steps(1) infinite;
-    }
-    @keyframes blink {
-      0%, 95% { transform: scaleY(1); }
-      96%, 100% { transform: scaleY(0.1); }
-    }
-  </style>
-
-  <!-- ท้องฟ้า -->
-  <rect width="100%" height="100%" class="snow"/>
-
-  <!-- หิมะตก -->
-  <circle class="snowflake" cx="30" cy="10" r="2" fill="white" style="animation-delay:0s"/>
-  <circle class="snowflake" cx="100" cy="0" r="1.5" fill="white" style="animation-delay:1s"/>
-  <circle class="snowflake" cx="160" cy="5" r="2.2" fill="white" style="animation-delay:2s"/>
-  <circle class="snowflake" cx="230" cy="10" r="1.8" fill="white" style="animation-delay:1.5s"/>
-  <circle class="snowflake" cx="280" cy="3" r="2" fill="white" style="animation-delay:2.8s"/>
-
-  <!-- พื้นหิมะ -->
-  <ellipse cx="160" cy="160" rx="160" ry="25" fill="#d3f0ff"/>
-
-  <!-- ตัวเพนกวิน -->
-  <g class="penguin" transform="translate(60,30)">
-    <!-- ขา -->
-    <g transform="translate(110,100)">
-      <ellipse cx="-14" cy="8" rx="8" ry="4" fill="#ffad33"/>
-      <ellipse cx="14" cy="8" rx="8" ry="4" fill="#ffad33"/>
+<!-- Cute animated penguin — paste this raw into your README.md -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="600" height="300" role="img" aria-label="Animated penguin">
+  <!-- background (transparent) -->
+  <!-- group for horizontal movement -->
+  <g id="moveGroup">
+    <!-- group for vertical bobbing -->
+    <g id="bobGroup">
+      <!-- body -->
+      <ellipse cx="150" cy="90" rx="42" ry="56" fill="#0b2233"/>
+      <!-- belly -->
+      <ellipse cx="150" cy="96" rx="28" ry="40" fill="#fff"/>
+      <!-- head -->
+      <circle cx="150" cy="46" r="28" fill="#0b2233"/>
+      <!-- face white -->
+      <ellipse cx="150" cy="52" rx="16" ry="12" fill="#fff"/>
+      <!-- eyes -->
+      <circle cx="142" cy="50" r="3.5" fill="#000"/>
+      <circle cx="158" cy="50" r="3.5" fill="#000"/>
+      <!-- beak -->
+      <path d="M150 58 L142 66 Q150 63 158 66 Z" fill="#ffb03b"/>
+      <!-- left wing -->
+      <path d="M110 90 Q116 78 126 92 Q118 100 110 98 Z" fill="#0b2233"/>
+      <!-- right wing -->
+      <path d="M190 90 Q184 78 174 92 Q182 100 190 98 Z" fill="#0b2233"/>
+      <!-- left foot -->
+      <path d="M136 137 Q142 130 148 137 Q142 142 136 137 Z" fill="#ffb03b"/>
+      <!-- right foot -->
+      <path d="M152 137 Q158 130 164 137 Q158 142 152 137 Z" fill="#ffb03b"/>
+      <!-- small scarf -->
+      <rect x="132" y="70" width="36" height="8" rx="3" fill="#ff6b6b"/>
+      <path d="M166 74 Q178 80 172 86 L170 82 Q176 78 166 74 Z" fill="#ff6b6b" opacity="0.9"/>
     </g>
-
-    <!-- ลำตัว -->
-    <ellipse cx="110" cy="70" rx="50" ry="65" fill="#111"/>
-    <ellipse cx="110" cy="78" rx="34" ry="48" fill="#fff"/>
-
-    <!-- ปีก -->
-    <g class="wing" transform="translate(60,70)">
-      <path d="M0 0 C -25 8, -30 35, -5 40 C 5 42, 10 36, 6 10 Z" fill="#111"/>
-    </g>
-    <g class="wing" transform="translate(160,70)">
-      <path d="M0 0 C 25 8, 30 35, 5 40 C -5 42, -10 36, -6 10 Z" fill="#111"/>
-    </g>
-
-    <!-- หัว -->
-    <g transform="translate(110,25)">
-      <circle cx="0" cy="0" r="24" fill="#111"/>
-      <ellipse cx="0" cy="6" rx="16" ry="20" fill="#fff"/>
-      <g transform="translate(-6,-2)">
-        <ellipse class="eye" cx="0" cy="0" rx="3.5" ry="4.5" fill="#111"/>
-      </g>
-      <g transform="translate(6,-2)">
-        <ellipse class="eye" cx="0" cy="0" rx="3.5" ry="4.5" fill="#111"/>
-      </g>
-      <path d="M-5 6 L0 12 L5 6 L0 8 Z" fill="#ffad33"/>
-    </g>
+    <!-- add a subtle shadow -->
+    <ellipse cx="150" cy="145" rx="36" ry="8" fill="#000" opacity="0.12"/>
   </g>
-</svg>
+
+  <!-- Horizontal movement: left-right -->
+  <animateTransform
+    xlink:href="#moveGroup"
+    attributeName="transform"
+    type="translate"
+    values="-30 0; 30 0; -30 0"
