@@ -3,7 +3,9 @@
   <h1>HI I, M AUTO 👋</h1>
   <em>Web App Developer / Comsci Student</em>
 </p>
-
+<p align="center">
+<img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg" alt="snake animation" />
+</p>
 <!-- ========================= Game Section ========================= -->
 <p align="center">
 <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWQ4aWJmZnNza2NhNmJuOWd4dnQ5NTJtaWx6bGZmbDFueTExNmN3NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Rpl1sod1vCXK0L2SUN/giphy.gif" width="300" alt="moving" />
