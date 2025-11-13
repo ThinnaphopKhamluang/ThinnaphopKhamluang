@@ -6,23 +6,8 @@
 
 <!-- ========================= Game Section ========================= -->
 <p align="center">
-  <strong>🎮 Mini Galaga</strong><br>
-  <!-- ใช้ SVG แทนเกมง่าย ๆ ให้ขยับได้ -->
-  <svg width="200" height="100" viewBox="0 0 200 100">
-    <!-- Player -->
-    <rect x="90" y="80" width="20" height="10" fill="#ff4136">
-      <animate attributeName="x" values="90;110;90" dur="1s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Enemy -->
-    <circle cx="50" cy="20" r="8" fill="#0074D9">
-      <animate attributeName="cy" values="20;40;20" dur="1.2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="150" cy="20" r="8" fill="#0074D9">
-      <animate attributeName="cy" values="20;40;20" dur="1.4s" repeatCount="indefinite"/>
-    </circle>
-  </svg>
+<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWQ4aWJmZnNza2NhNmJuOWd4dnQ5NTJtaWx6bGZmbDFueTExNmN3NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Rpl1sod1vCXK0L2SUN/giphy.gif" width="300" alt="moving" />
 </p>
-
 <!-- ========================= About Me ========================= -->
 <h2 align="center">About Me</h2>
 <p align="center">
