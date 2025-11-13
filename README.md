@@ -1,16 +1,42 @@
-## Hi there 👋
+# สวัสดีครับ 👋 ผม/ฉัน [ชื่อของคุณ]
 
-<!--
-**ThinnaphopKhamluang/ThinnaphopKhamluang** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+> สั้น ๆ เกี่ยวกับตัวคุณ: ตำแหน่ง, ความสนใจ, หรือสิ่งที่กำลังทำตอนนี้
 
-Here are some ideas to get you started:
+- 🔭 กำลังทำ: โปรเจค AI Hardware / โปรเจคตัวอย่าง
+- 🌱 กำลังเรียนรู้: Rust, Embedded Systems, ML Ops
+- 👯 สนใจร่วมงาน: วิจัย/พัฒนา AI hardware หรือ visual arts + tech
+- ⚡ สถานะปัจจุบัน: เปิดรับงาน/รับปรึกษา (ถ้ามี)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### 📫 ติดต่อ
+- Email: your.email@example.com
+- LinkedIn: https://www.linkedin.com/in/yourprofile
+- Twitter: https://twitter.com/yourhandle
+
+---
+
+### 📊 GitHub Stats
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=USERNAME&show_icons=true&theme=default)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=USERNAME&layout=compact&theme=default)
+
+---
+
+### 🏆 Trophies
+![trophy](https://github-profile-trophy.vercel.app/?username=USERNAME&theme=onedark)
+
+---
+
+### 🛠️ Tech / Tools
+`Python` `C/C++` `Git` `Docker` `Linux` `TensorFlow` `PyTorch`  
+
+---
+
+### 📌 โปรเจคเด่น
+- [โปรเจคชื่อ](link) — คำอธิบายสั้น 1 บรรทัด
+- [โปรเจคอื่น ๆ](link) — คำอธิบายสั้น 1 บรรทัด
+
+---
+
+_Last updated: <!--LAST_UPDATED-->_
