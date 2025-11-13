@@ -4,35 +4,22 @@
   <em>Web App Developer / Comsci Student</em>
 </p>
 
-<!-- ========================= Mini Mario Animation ========================= -->
+<!-- ========================= Game Section ========================= -->
 <p align="center">
-  <strong>🎮 Mini Mario</strong><br>
+  <strong>🎮 Mini Galaga</strong><br>
+  <!-- ใช้ SVG แทนเกมง่าย ๆ ให้ขยับได้ -->
   <svg width="200" height="100" viewBox="0 0 200 100">
-    <!-- Ground -->
-    <rect x="0" y="90" width="200" height="10" fill="#654321"/>
-    
-    <!-- Mario Body -->
-    <rect x="90" y="70" width="20" height="20" fill="#ff0000"/>
-    
-    <!-- Mario Hat -->
-    <rect x="90" y="65" width="20" height="5" fill="#ffcc00"/>
-    
-    <!-- Mario Legs -->
-    <rect x="90" y="90" width="8" height="5" fill="#0000ff">
-      <animate attributeName="y" values="90;92;90" dur="0.4s" repeatCount="indefinite"/>
+    <!-- Player -->
+    <rect x="90" y="80" width="20" height="10" fill="#ff4136">
+      <animate attributeName="x" values="90;110;90" dur="1s" repeatCount="indefinite"/>
     </rect>
-    <rect x="102" y="90" width="8" height="5" fill="#0000ff">
-      <animate attributeName="y" values="92;90;92" dur="0.4s" repeatCount="indefinite"/>
-    </rect>
-    
-    <!-- Walking Animation (Mario moves left-right) -->
-    <animateTransform 
-      attributeName="transform"
-      type="translate"
-      values="0 0; 20 0; 0 0"
-      dur="2s"
-      repeatCount="indefinite"
-    />
+    <!-- Enemy -->
+    <circle cx="50" cy="20" r="8" fill="#0074D9">
+      <animate attributeName="cy" values="20;40;20" dur="1.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="20" r="8" fill="#0074D9">
+      <animate attributeName="cy" values="20;40;20" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
   </svg>
 </p>
 
@@ -65,6 +52,7 @@
   </a>
 </p>
 
+<!-- ========================= Footer ========================= -->
 <p align="center">
   Made with ❤️ by AUTO
 </p>
